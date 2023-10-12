@@ -11,6 +11,7 @@
     <groupId>com.mrinalgupta</groupId>
     <artifactId>loans</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>loans</name>
     <description>loans</description>
     <properties>
@@ -63,7 +64,15 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
+                    <image>mrinalgupta1097/${project.artifactId}:s4</image>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
